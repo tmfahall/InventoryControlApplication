@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="inventorycontrol" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Andrew\ Hall\\Source\\Workspaces\\Workspace\\Inventory\ Control\\inventory_control\\inventory_control\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Andrew\ Hall\\Source\\Workspaces\\Workspace\\Inventory\ Control\\inventory_control\\inventory_control\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="inventory_control-Web.config Connection String" description="" value="Data Source=tcp:fu21qa0ea7.database.windows.net,1433;Initial Catalog=inventorycontrol;User Id=anhall@fu21qa0ea7;Password=CvDDQk$Ga7Ac" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Andrew\ Hall\\Source\\Workspaces\\Workspace\\Inventory\ Control\\inventory_control\\inventory_control\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='inventory_control']/@connectionString" />
+  </parameter>
+</parameters>

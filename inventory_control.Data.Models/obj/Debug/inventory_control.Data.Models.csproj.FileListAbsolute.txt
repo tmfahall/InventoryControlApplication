@@ -1,0 +1,16 @@
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\inventory_control.Data.Models.dll.config
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\inventory_control.Data.Models.dll
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\inventory_control.Data.Models.pdb
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\EntityFramework.dll
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\EntityFramework.xml
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\obj\Debug\inventory_control.Data.Models.csprojResolveAssemblyReference.cache
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\obj\Debug\inventory_control.Data.Models.dll
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\obj\Debug\inventory_control.Data.Models.pdb
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\SendGrid.SmtpApi.dll
+C:\Users\Andrew Hall\Source\Workspaces\Workspace\Inventory Control\inventory_control\inventory_control.Data.Models\bin\Debug\SendGridMail.dll

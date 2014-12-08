@@ -1,0 +1,26 @@
+﻿[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.modal {
+    width: 80%;
+}
+
+th {
+    background-color: #909394;
+    color: #000000;
+} 
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+a {
+    color: black;
+}
+
+a:hover, a:focus {
+    color: black;
+}

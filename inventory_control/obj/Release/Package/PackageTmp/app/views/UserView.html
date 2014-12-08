@@ -1,0 +1,39 @@
+﻿<div>
+    <h3>In UserView (user for admin to manage)</h3>
+</div>
+<div>
+
+    <div class="form-group">
+        {{user.userId}}
+    </div>
+    <div class="form-group">
+        <label>User Name</label>
+        <input type="text" ng-model="user.userName" />
+    </div>
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" ng-model="user.firstName" />
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" ng-model="user.lastName" />
+    </div>
+    <div class="form-group">
+        <label>Department </label>
+        <!--<select ng-init="selectedDepartment" ng-model=" selectedDepartment">
+            <option ng-repeat="d in departments" value="{{d.departmentId}}">{{d.departmentName}}</option>
+        </select>-->
+        <select ng-init="user.departmentId" ng-model="user.departmentId" ng-options="d.departmentId as d.departmentName for d in departments"></select>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" ng-model="user.email" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success" ng-click="saveUser()">Save</button> 
+    </div>
+    <div class="form-group">
+        <button class="btn btn-danger" ng-click="cancelUpdateUser()">Cancel</button>
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+﻿<div>
+    <h3>In UsersView ( list of users for admin to manage)</h3>
+    <button class="btn btn-success" ng-click="newUser()">Add User</button><br />
+</div>
+    <div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th><a ng-click="predicate='userName'; reverse=false">User Name</a>(<a ng-click="predicate='-userName'; reverse=false">^</a>)</th>
+                    <th><a ng-click="predicate='email'; reverse=false">Email</a>(<a ng-click="predicate='-email'; reverse=false">^</a>)</th>
+                    <th><a ng-click="predicate='firstName'; reverse=false">First Name</a>(<a ng-click="predicate='-firstName'; reverse=false">^</a>)</th>
+                    <th><a ng-click="predicate='lastName'; reverse=false">Last Name</a>(<a ng-click="predicate='-lastName'; reverse=false">^</a>)</th>
+                    <th><a ng-click="predicate='itemId'; reverse=false">User Id</a>(<a ng-click="predicate='-itemId'; reverse=false">^</a>)</th>
+                    <th><a ng-click="predicate='departmentName'; reverse=false">Department Name</a>(<a ng-click="predicate='-departmentName'; reverse=false">^</a>)</th>
+                    <th><a ng-click="predicate='departmentId'; reverse=false">Department Id</a>(<a ng-click="predicate='-departmentId'; reverse=false">^</a>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in users | orderBy:predicate:reverse">
+                    <td><a ng-click="getUser(user.userId)">{{user.userName}}</a></td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.firstName}}</td>
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.userId}}</td>
+                    <td>{{user.departmentName}}</td>
+                    <td>{{user.departmentId}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

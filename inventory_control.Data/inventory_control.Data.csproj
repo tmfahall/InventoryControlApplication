@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BE3DC34-D706-4ECB-9149-21BDDA2E5EA5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>inventory_control.Data</RootNamespace>
+    <AssemblyName>inventory_control.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid.SmtpApi">
+      <HintPath>..\packages\SendGrid.SmtpApi.1.1.3\lib\net40\SendGrid.SmtpApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGridMail">
+      <HintPath>..\packages\Sendgrid.5.0.0\lib\SendGridMail.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Migrations\201412030021445_initial.cs" />
+    <Compile Include="Migrations\201412030021445_initial.Designer.cs">
+      <DependentUpon>201412030021445_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412032207494_viewModelPass.cs" />
+    <Compile Include="Migrations\201412032207494_viewModelPass.Designer.cs">
+      <DependentUpon>201412032207494_viewModelPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412042242529_locationPalletCapacity.cs" />
+    <Compile Include="Migrations\201412042242529_locationPalletCapacity.Designer.cs">
+      <DependentUpon>201412042242529_locationPalletCapacity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412050410489_addedIsApproved.cs" />
+    <Compile Include="Migrations\201412050410489_addedIsApproved.Designer.cs">
+      <DependentUpon>201412050410489_addedIsApproved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412060140359_completeDateNullable.cs" />
+    <Compile Include="Migrations\201412060140359_completeDateNullable.Designer.cs">
+      <DependentUpon>201412060140359_completeDateNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412071826128_addedOrderModifiedFlag.cs" />
+    <Compile Include="Migrations\201412071826128_addedOrderModifiedFlag.Designer.cs">
+      <DependentUpon>201412071826128_addedOrderModifiedFlag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412081703547_addedThresholdEmailSentBoolToItem.cs" />
+    <Compile Include="Migrations\201412081703547_addedThresholdEmailSentBoolToItem.Designer.cs">
+      <DependentUpon>201412081703547_addedThresholdEmailSentBoolToItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seeder.cs" />
+    <Compile Include="SeederDepartments.cs" />
+    <Compile Include="SeederItem.cs" />
+    <Compile Include="SeederItemLocation.cs" />
+    <Compile Include="SeederLocations.cs" />
+    <Compile Include="SeederOrder.cs" />
+    <Compile Include="SeederSupplier.cs" />
+    <Compile Include="SeederSupplierPart.cs" />
+    <Compile Include="SeederUsers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\inventory_control.Data.Models\inventory_control.Data.Models.csproj">
+      <Project>{86cf1587-6fa8-4960-84ac-d492031a6226}</Project>
+      <Name>inventory_control.Data.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201412030021445_initial.resx">
+      <DependentUpon>201412030021445_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412032207494_viewModelPass.resx">
+      <DependentUpon>201412032207494_viewModelPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412042242529_locationPalletCapacity.resx">
+      <DependentUpon>201412042242529_locationPalletCapacity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412050410489_addedIsApproved.resx">
+      <DependentUpon>201412050410489_addedIsApproved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412060140359_completeDateNullable.resx">
+      <DependentUpon>201412060140359_completeDateNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412071826128_addedOrderModifiedFlag.resx">
+      <DependentUpon>201412071826128_addedOrderModifiedFlag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412081703547_addedThresholdEmailSentBoolToItem.resx">
+      <DependentUpon>201412081703547_addedThresholdEmailSentBoolToItem.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQL_Updates.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

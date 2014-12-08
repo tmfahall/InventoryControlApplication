@@ -1,0 +1,38 @@
+﻿<div>
+    <h3>In UserCartView (maintain cart of orders)</h3>
+</div>
+<div ng-show="!isSubmitted && !cartIsEmpty()">
+    <div>
+        <button class="btn btn-success" ng-click="submitCart()">Submit</button>
+        <button class="btn btn-danger" ng-click="cancelCart()">Cancel</button> &nbsp;&nbsp;
+        <label>Department: </label>
+        <select ng-init="departmentId" ng-model="departmentId" ng-options="d.departmentId as d.departmentName for d in departments"></select>
+ 
+    </div>
+    <table class="table-bordered table-striped">
+        <thead>
+            <tr>
+                <th><a ng-click="predicate='itemId'; reverse=false">Item Id</a>(<a ng-click="predicate='-itemId'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='itemName'; reverse=false">Item Name</a>(<a ng-click="predicate='-itemName'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='description'; reverse=false">Description</a>(<a ng-click="predicate='-description'; reverse=false">^</a>)</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in cartItems | orderBy:predicate:reverse">
+                <td>{{item.itemId}}</td>
+                <td>{{item.itemName}}</td>
+                <td>{{item.description}}</td>
+                <td><input type="text" ng-model="item.amountNeeded" ng-change="checkQuantityRangeObj(item, 'amountNeeded', 0, 10000, 0, true)" /></td>
+                <td><button class="btn btn-warning" ng-click="removeItem($index)">Remove Item</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="text-center" ng-show="isSubmitted">
+    <h3>Your order has been submitted.</h3>
+    <button class="btn btn-success text-center" ng-click="goHome()">Ok/Home</button>
+</div>
+<div ng-show="!isSubmitted && cartIsEmpty()">
+    <h3 class="text-center">Cart is empty.</h3>
+</div>

@@ -1,0 +1,30 @@
+﻿<div>
+    <h3>In UserOrderView (user views list of items to add to order cart)</h3>
+
+    <button class="btn btn-success" ng-click="addToCart()">Add To Cart</button>
+</div>
+
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+
+            </tr>
+            <tr>
+                <th><a ng-click="predicate='itemId'; reverse=false">Item Id</a>(<a ng-click="predicate='-itemId'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='itemName'; reverse=false">Item Name</a>(<a ng-click="predicate='-itemName'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='description'; reverse=false">Item Description</a>(<a ng-click="predicate='-description'; reverse=false">^</a>)</th>
+                <th>Amount Needed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in items | orderBy:predicate:reverse">
+                <td>{{item.itemId}}</td>
+                <td>{{item.itemName}}</td>
+                <td>{{item.description}}</td>
+                <td><input type="text" ng-model="item.amountNeeded" ng-change="checkQuantityRangeObj(item, 'amountNeeded', 0, 10000, 0, true)" /></td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

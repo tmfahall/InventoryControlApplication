@@ -1,0 +1,27 @@
+﻿<div>
+    <h3>In ItemsView (view list of items to maintain)</h3>
+</div>
+
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th><a ng-click="predicate='itemId'; reverse=false">Item Id</a>(<a ng-click="predicate='-itemId'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='itemName'; reverse=false">Item Name</a>(<a ng-click="predicate='-itemName'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='quantityInStock'; reverse=false">Qty In Stock</a>(<a ng-click="predicate='-quantityInStock'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='minQuantity'; reverse=false">Min Qty</a>(<a ng-click="predicate='-minQuantity'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='qtyTilOrder'; reverse=false">Qty Until Order</a>(<a ng-click="predicate='-qtyTilOrder'; reverse=false">^</a>)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in items | orderBy:predicate:reverse" ng-init="">
+                <td><a ng-click="getItem(item.itemId)">{{item.itemId}}</a></td>
+                <td>{{item.itemName}}</td>
+                <td>{{item.quantityInStock}}</td>
+                <td>{{item.minQuantity}}</td>
+                <td>{{item.qtyTilOrder}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

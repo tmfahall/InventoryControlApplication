@@ -1,0 +1,26 @@
+﻿<div>
+    <h3>In LocationItemsView (view list of items to maintain)</h3>
+
+
+</div>
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th><a ng-click="predicate='locationId'; reverse=false">Location Id</a>(<a ng-click="predicate='-locationId'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='locationName'; reverse=false">Location Name</a>(<a ng-click="predicate='-locationName'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='palletCapacity'; reverse=false">Pallet Capacity</a>(<a ng-click="predicate='-itemIdpalletCapacity'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='palletsRemaining'; reverse=false">Remaining Capacity</a>(<a ng-click="predicate='-palletsRemaining'; reverse=false">^</a>)</th>
+            </tr>
+           </thead>
+        <tbody>
+            <tr ng-repeat="loc in locations | orderBy:predicate:reverse">
+                <td><a ng-click="getLocationItem(loc.locationId)">{{loc.locationId}}</a></td>
+                <td>{{loc.locationName}}</td>
+                <td>{{loc.palletCapacity}}</td>
+                <td>{{loc.palletsRemaining}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

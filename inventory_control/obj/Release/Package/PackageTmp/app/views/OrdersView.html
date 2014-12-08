@@ -1,0 +1,29 @@
+﻿<div>
+    <h3>User Orders</h3>
+    <label for="toggleForOrderCompleted">Display Completed Orders</label>
+    <input type="checkbox" id="toggleForOrderCompleted" ng-model="completeCheckBox" />
+
+</div>
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th><a ng-click="predicate='orderId'; reverse=false">Order Id</a>(<a ng-click="predicate='-orderId'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='lastName'; reverse=false">Employee Name</a>(<a ng-click="predicate='-lastName'; reverse=false">^ </a>)</th>
+                <th><a ng-click="predicate='departmentName'; reverse=false">Department</a>(<a ng-click="predicate='-departmentName'; reverse=false">^</a>)</th>
+                <th><a ng-click="predicate='beginTimestamp'; reverse=false">Date / Time Requested</a>(<a ng-click="predicate='-beginTimestamp'; reverse=false">^</a>)</th>
+                <th>IsComplete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="ord in orders | filter:onlyIncomplete | orderBy:predicate:reverse" ng-click="getOrder(ord.orderId)">
+                <td>{{ord.orderId}}</td>
+                <td>{{ord.firstName + ' ' + ord.lastName}}</td>
+                <td>{{ord.departmentName}}</td>
+                <td>{{ord.beginTimestamp}}</td>
+                <td>{{ord.isComplete}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
